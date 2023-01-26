@@ -1,10 +1,6 @@
 import image from '../assests/images/3.jpg';
 import classes from "../styles/Video.module.css"
 
-
-
-
-
 export default function Video(){
     return(
         <div>

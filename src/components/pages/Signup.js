@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Form from "../Form";
 import Illustration from "../Illustration";
 import classes from '../../styles/Signup.module.css'
@@ -35,7 +36,7 @@ export default function Signup(){
                     <Checkbox text="I agree to the Terms &amp; Conditions"/>
                     <Button><span>Submit now</span></Button>
                     <div className="info">
-                         Already have an account? <a href="login.html">Login</a> instead.
+                         Already have an account? <Link to="/login">Login</Link> instead.
                      </div>
                 
                 </Form>
