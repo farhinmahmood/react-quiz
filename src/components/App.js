@@ -7,7 +7,8 @@ import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import { AuthProvider } from "../contexts/AuthContext";
-
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/signup" component={Signup}/>
-            <Route exact path="/login" component={Login}/>
-            <Route exact path="/quiz" component={Quiz}/>
-            <Route exact path="/result" component={Results}/>
+            <PublicRoute  exact path="/signup" component={Signup}/>
+            <PublicRoute  exact path="/login" component={Login}/>
+            <PrivateRoute exact path="/quiz" component={Quiz}/>
+            <PrivateRoute exact path="/result" component={Results}/>
           </Switch>
         </Layout>
       </AuthProvider>
