@@ -8,8 +8,6 @@ import Answers from "../Answers";
 import MiniPlayer from "../MiniPlayer";
 import ProgressBar from "../ProgressBar";
 
-
-
 const initialState = null;
 
 const reducer = (state, action) => {
@@ -71,7 +69,6 @@ export default function Quiz() {
     }
   }
 
- 
   // submit quiz
   async function submit() {
     const { uid } = currentUser;
@@ -104,6 +101,7 @@ export default function Quiz() {
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
+            input
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
